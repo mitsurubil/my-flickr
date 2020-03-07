@@ -15,7 +15,7 @@ const App = () => {
 
   const getInfos = async () => {
 
-    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=e3ddd109b23c91d1fa00173dc86818c7&gallery_id=66911286-72157712805674251&format=json&nojsoncallback=1&auth_token=72157713376262756-7d7f8b283797088f&api_sig=44f60b1997a8efb7379a066851d39c64`);
+    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=ea3ca670f9a42e0c869a2938608bc4dc&gallery_id=66911286-72157712805674251&format=json&nojsoncallback=1&auth_token=72157713394026068-bb10c360ad9c0aea&api_sig=0a4ad7ea718fc6707e3eb4c8f1f781a7`);
 
     const data = await response.json();
     setInfos(data.photos.photo);
