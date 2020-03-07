@@ -13,36 +13,27 @@ class Dropdown extends Component {
 
     showOptions(event) {
         event.preventDefault();
-
-        this.setState({ showOptions: true }, () => {
+        this.setState({ showOptions: true, condition: true }, () => {
             document.addEventListener('click', this.closeOptions);
+        });
+        this.setState({
+            condition: !this.state.condition
         });
     }
 
     closeOptions(event) {
-
         if (!this.dropdown.contains(event.target)) {
-
-            this.setState({ showOptions: false }, () => {
+            this.setState({ showOptions: false, condition: false }, () => {
                 document.removeEventListener('click', this.closeOptions);
             });
         }
-    }
-
-    state = { active: false }
-
-
-    handleClick() {
-        this.setState({
-            condition: !this.state.condition
-        });
     }
 
     render() {
         return (
             <div>
                 <button onClick={this.showOptions}>Tags
-                <i onClick={() => this.handleClick()} className={this.state.condition ? "chevron" : "chevron down"}></i>
+                <i className={this.state.condition ? "chevron" : "chevron down"}></i>
                 </button>
                 {
                     this.state.showOptions
