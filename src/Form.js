@@ -4,7 +4,7 @@ import searchIcon from "./img/search.svg";
 const Form = ({ getSearch, search, updateSearch }) => {
     return (
         <form onSubmit={getSearch} className='search-form'>
-            <div className='Search-icon' type='submit'>
+            <div type='submit' className='Search-icon'>
                 <input
                     type='text'
                     className='search-bar'
@@ -12,7 +12,7 @@ const Form = ({ getSearch, search, updateSearch }) => {
                     value={search}
                     onChange={updateSearch}
                 />
-                <img className="icon" src={searchIcon} alt={searchIcon} />
+                <img onClick={getSearch} src={searchIcon} alt={searchIcon} className="icon"/>
             </div>
         </form>
     );

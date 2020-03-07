@@ -48,10 +48,10 @@ class Dropdown extends Component {
                     this.state.showOptions
                         ? (
                             <div
-                                className="options"
                                 ref={(element) => {
                                     this.dropdown = element;
                                 }}
+                                className="options"
                             >
                                 <button> Option 1 </button>
                                 <button> Option 2 </button>
