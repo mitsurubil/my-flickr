@@ -7,15 +7,14 @@ const App = () => {
 
   const [infos, setInfos] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('cats');
 
   useEffect(() => {
     getInfos();
   }, [query]);
 
   const getInfos = async () => {
-
-    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=ea3ca670f9a42e0c869a2938608bc4dc&gallery_id=66911286-72157712805674251&format=json&nojsoncallback=1&auth_token=72157713394026068-bb10c360ad9c0aea&api_sig=0a4ad7ea718fc6707e3eb4c8f1f781a7`);
+    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=53d3d70a30622879ec4f9d01ea5fb9e7&tags=${query}&format=json&nojsoncallback=1`);
 
     const data = await response.json();
     setInfos(data.photos.photo);
