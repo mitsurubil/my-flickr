@@ -9,13 +9,11 @@ const App = () => {
   const [infos, setInfos] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('cats');
-
   useEffect(() => {
     getInfos();
   }, [query]);
-
   const getInfos = async () => {
-    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f443e234d2161668d8a8290bf04aafff&tags=${query}&text=-naked%2C+-sexy%2C+-nude&format=json&nojsoncallback=1`);
+    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=392543b4e7a9d62353ff0ee0084ad1a5&tags=${query}&text=-naked%2C+-ass%2C+-sexy&format=json&nojsoncallback=1`);
     const data = await response.json();
     setInfos(data.photos.photo);
     console.log('array', data.photos.photo);

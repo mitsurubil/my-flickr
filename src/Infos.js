@@ -7,9 +7,8 @@ const Infos = ({ title, id, server, secret, farm, owner }) => {
     useEffect(() => {
         getInformations();
     }, []);
-
     const getInformations = async () => {
-        const url = `https://www.flickr.com/services/rest/?method=flickr.people.getInfo&api_key=f443e234d2161668d8a8290bf04aafff&user_id=${owner}&format=json&nojsoncallback=1`;
+        const url = `https://www.flickr.com/services/rest/?method=flickr.people.getInfo&api_key=392543b4e7a9d62353ff0ee0084ad1a5&user_id=${owner}&format=json&nojsoncallback=1`;
         const response = await fetch(url);
         const data = await response.json();
         setInformations(data.person.username._content);
