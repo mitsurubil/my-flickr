@@ -13,7 +13,7 @@ const App = () => {
     getInfos();
   }, [query]);
   const getInfos = async () => {
-    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=392543b4e7a9d62353ff0ee0084ad1a5&tags=${query}&text=-naked%2C+-ass%2C+-sexy&format=json&nojsoncallback=1`);
+    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=6ac06f8c68276f6ab798f5d5ca012f91&tags=${query}&text=-naked%2C+-ass%2C+-sexy&format=json&nojsoncallback=1`);
     const data = await response.json();
     setInfos(data.photos.photo);
     console.log('array', data.photos.photo);
