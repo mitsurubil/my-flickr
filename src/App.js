@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Form from './Form';
 import Infos from './Infos';
+import Spinner from './Spinner';
 import './App.css';
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
           getSearch={getSearch}
         />
       </header>
+      <Spinner />
       <section className='App-body'>
         {infos.map(info => (
           <Infos
