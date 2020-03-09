@@ -14,8 +14,7 @@ const App = () => {
   }, [query]);
 
   const getInfos = async () => {
-    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=53d3d70a30622879ec4f9d01ea5fb9e7&tags=${query}&format=json&nojsoncallback=1`);
-
+    const response = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f443e234d2161668d8a8290bf04aafff&tags=${query}&text=-naked%2C+-sexy%2C+-nude&format=json&nojsoncallback=1`);
     const data = await response.json();
     setInfos(data.photos.photo);
     console.log('array', data.photos.photo);
@@ -58,5 +57,6 @@ const App = () => {
     </div>
   );
 };
+
 export default App;
 
