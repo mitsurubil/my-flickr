@@ -182,4 +182,11 @@ button:hover {
   form {
     margin-left: auto;
   }
+
+  img {
+    width: 100px;
+    height: 100px;
+    /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+    object-fit: scale-down;
+  }
 }

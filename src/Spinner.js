@@ -7,7 +7,7 @@ const Spinner = () => {
     });
     return (
         <div className="loader">
-            <div><iframe src="https://giphy.com/embed/y1ZBcOGOOtlpC" width="100%" height="100%" frameBorder="0" allowFullScreen></iframe></div>
+            <div><iframe src="https://giphy.com/embed/y1ZBcOGOOtlpC" frameBorder="0" allowFullScreen></iframe></div>
         </div>
     );
 
